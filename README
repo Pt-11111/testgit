@@ -1,1 +1,28 @@
 'gittest' 
+
+## 初次使用
+## git config --global user.name "name"
+## git config --global user.email "email"
+
+
+## git init 将当前目录作为仓库
+## git clone https://github.com/libgit2/libgit2 克隆网络仓库
+.gitignore 为忽略文件
+
+## git help <opt>
+## git <opt> --help
+
+
+## git add 文件名.后缀  （暂存）
+
+##  git commit 文件名.后缀(提交)
+
+## git status 查看修改文件状态
+
+## git diff 找不同
+
+## git log 修改记录
+
+## git reset HEAD 文件名.后缀 （取消暂存）
+                             ⬇此处有一个空格
+## git checkout -- 文件名.后缀  恢复未修改前状态
