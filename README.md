@@ -29,6 +29,7 @@
 ## git add 文件
 ## git commit --amend 补充提交
 
+## git mv oldfile newfile  重命名
 
 ## git reset HEAD 文件名.后缀 （取消暂存）
                              ⬇此处有一个空格
@@ -43,4 +44,14 @@
 ## 第一次加-u 以后只要本地作了提交，就可以 git push origin master
 ## git remote -v 查看远程库信息
 ## git remote rm 库名 删除远程绑定关系
+
+
+## 创建分支
+## git checkout -b dev 
+## 相当于以下两条命令
+## git branch dev
+## git checkout dev 
+
+## git branch   查看分支情况
+## 带 * 号的是当前分支
 ## 
