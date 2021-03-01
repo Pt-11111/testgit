@@ -63,6 +63,8 @@ git remote -v
 ## 删除远程绑定关系
 git remote rm 库名 
 
+## 重命名远程库
+git remote rename oldname newname
 
 ## 创建分支
  git checkout -b dev 
