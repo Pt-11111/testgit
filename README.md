@@ -20,6 +20,10 @@ git add 文件名.后缀
 ## (提交)
 git commit 文件名.后缀
 
+git commit -a
+
+git commit -m "message"
+
 ## （取消暂存）
 git reset HEAD 文件名.后缀 
 ## 恢复未修改前状态  慎用
@@ -84,3 +88,5 @@ git checkout <name>或者git switch <name>
 
 ## 创建+切换分支：
 git checkout -b <name>或者git switch -c <name>
+
+
