@@ -24,7 +24,7 @@ git commit 文件名.后缀
 git reset HEAD 文件名.后缀 
 ## 恢复未修改前状态  慎用
                              ⬇此处有一个空格
-git checkout -- 文件名.后缀  
+git checkout -- 文件名.后缀   注意文件名前面的--
 
 ## 查看修改文件状态
 git status 
@@ -76,4 +76,11 @@ git merge dev 合并分支
 ## 删除分支
 git branch -d <name>
 
+## 创建分支：
+git branch <name>
 
+## 切换分支：
+git checkout <name>或者git switch <name>
+
+## 创建+切换分支：
+git checkout -b <name>或者git switch -c <name>
