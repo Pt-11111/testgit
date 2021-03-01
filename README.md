@@ -69,4 +69,5 @@ git remote rm 库名
 ## 查看分支情况
 git branch   
  带 * 号的是当前分支
-## 
+## git checkout master 切换到master分支后 执行：
+git merge dev 合并分支
