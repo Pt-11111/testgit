@@ -86,7 +86,13 @@ git remote rename oldname newname
 ## 创建分支
  git checkout -b dev  此种情况默认是master的分支
 
- git checkout -b 分支的分支 分支   这种是指定复制分支
+ git checkout -b 分支的分支 分支   创建分支的分支
+
+ git checkout -b 分支 远程库名/分支名   创建远程分支的分支
+
+ git branch --set-upstream-to=远程库名/分支名 本地分支名     将远程分支与本地分支链接  （不是从远程创建分支的情况）
+
+只有本地分支和远程分支有关联 才能执行git pull
 
 ## 相当于以下两条命令
  git branch dev
@@ -102,6 +108,8 @@ git merge dev 合并分支
 
 ## 删除分支
 git branch -d \<name\>  删除本地分支
+
+git branch -D \<name\>  强制删除本地分支
 
 git push 远程仓库名 --delete 分支名   删除远程分支
 
@@ -134,4 +142,4 @@ git stash pop 恢复现场的同时删除现场
 
 git stash apply  \<指定现场名\>
 
-git stash drop 
+git stash drop  删除现场
