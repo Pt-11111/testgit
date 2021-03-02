@@ -9,6 +9,8 @@
 ## git init 将当前目录作为仓库
  git clone https://github.com/libgit2/libgit2 克隆网络仓库
 
+git clone -b 分支名 地址     指定分支
+
 .gitignore 为忽略文件
 
 ## 获取帮助
@@ -72,7 +74,10 @@ git remote rm 库名
 git remote rename oldname newname
 
 ## 创建分支
- git checkout -b dev 
+ git checkout -b dev  此种情况默认是master的分支
+
+ git checkout -b 分支的分支 分支   这种是指定复制分支
+
 ## 相当于以下两条命令
  git branch dev
 
@@ -97,4 +102,23 @@ git checkout <name>或者git switch <name>
 ## 创建+切换分支：
 git checkout -b <name>或者git switch -c <name>
 
+## 合并分支
+合并分支时，如果可能，Git会用Fast forward模式，但这种模式下，删除分支后，会丢掉分支信息。
 
+如果要强制禁用Fast forward模式，Git就会在merge时生成一个新的commit，这样，从分支历史上就可以看出分支信息。
+
+git merge --no-ff -m "message" dev     dev向当前分支合并
+
+
+## 保存工作现场  不暂存也不提交
+git stash 
+
+git stash list 查看工作现场
+
+git stash pop 恢复现场的同时删除现场 
+
+等于以下的组合
+
+git stash apply  /<指定现场名/>
+
+git stash drop 
