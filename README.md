@@ -2,6 +2,7 @@
 
 ## 初次使用
  git config --global user.name "name"
+
  git config --global user.email "email"
 
 
@@ -11,8 +12,9 @@
 .gitignore 为忽略文件
 
 ## 获取帮助
- git help <opt>
- git <opt> --help
+ git help /<opt/>
+
+ git /<opt/> --help
 
 ## （暂存）
 git add 文件名.后缀  
@@ -27,7 +29,7 @@ git commit -m "message"
 ## （取消暂存）
 git reset HEAD 文件名.后缀 
 ## 恢复未修改前状态  慎用
-                             ⬇此处有一个空格
+               ⬇此处有一个空格
 git checkout -- 文件名.后缀   注意文件名前面的--
 
 ## 查看修改文件状态
@@ -42,7 +44,9 @@ git log
 
 ##  组合操作 补充提交
  git commit 文件
+
  git add 文件
+
  git commit --amend 
 
 ## 重命名
@@ -52,6 +56,7 @@ git mv oldfile newfile
 
 ## 远程仓库
  ssh-keygen -t rsa -C "邮箱地址" 
+
  到/用户目录/.ssh/id_rsa.pub 复制后添加到github sshkey管理
 ## github 新建仓库后 关联本地到远程仓库
  git remote add <(name)> git@github.com:<用户名>/仓库名             
@@ -70,6 +75,7 @@ git remote rename oldname newname
  git checkout -b dev 
 ## 相当于以下两条命令
  git branch dev
+
  git checkout dev 
 
 ## 查看分支情况
