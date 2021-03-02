@@ -5,6 +5,7 @@
 
  git config --global user.email "email"
 
+***
 
 ## git init 将当前目录作为仓库
  git clone https://github.com/libgit2/libgit2 克隆网络仓库
@@ -13,13 +14,19 @@ git clone -b 分支名 地址     指定分支
 
 .gitignore 为忽略文件
 
+***
+
 ## 获取帮助
  git help \<opt>
 
  git \<opt\> --help
 
+***
+
 ## （暂存）
 git add 文件名.后缀  
+
+***
 
 ## (提交)
 git commit 文件名.后缀
@@ -27,6 +34,8 @@ git commit 文件名.后缀
 git commit -a
 
 git commit -m "message"
+
+***
 
 ## （取消暂存）
 git reset HEAD 文件名.后缀 
@@ -43,6 +52,7 @@ git diff
 ## 修改记录
 git log 
 
+***
 
 ##  组合操作 补充提交
  git commit 文件
@@ -93,7 +103,7 @@ git merge dev 合并分支
 ## 删除分支
 git branch -d \<name\>  删除本地分支
 
-git push 远程仓库名 --delete 分支名
+git push 远程仓库名 --delete 分支名   删除远程分支
 
 
 ## 创建分支：
