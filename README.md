@@ -9,6 +9,8 @@
 ## git init 将当前目录作为仓库
  git clone https://github.com/libgit2/libgit2 克隆网络仓库
 
+git clone -b 分支名 地址     指定分支
+
 .gitignore 为忽略文件
 
 ## 获取帮助
@@ -72,7 +74,10 @@ git remote rm 库名
 git remote rename oldname newname
 
 ## 创建分支
- git checkout -b dev 
+ git checkout -b dev  此种情况默认是master的分支
+
+ git checkout -b 分支的分支 分支   这种是指定复制分支
+
 ## 相当于以下两条命令
  git branch dev
 
