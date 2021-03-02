@@ -14,9 +14,9 @@ git clone -b 分支名 地址     指定分支
 .gitignore 为忽略文件
 
 ## 获取帮助
- git help /<opt/>
+ git help \<opt>
 
- git /<opt/> --help
+ git \<opt\> --help
 
 ## （暂存）
 git add 文件名.后缀  
@@ -91,16 +91,19 @@ git branch
 git merge dev 合并分支
 
 ## 删除分支
-git branch -d <name>
+git branch -d \<name\>  删除本地分支
+
+git push 远程仓库名 --delete 分支名
+
 
 ## 创建分支：
-git branch <name>
+git branch \<name\>
 
 ## 切换分支：
-git checkout <name>或者git switch <name>
+git checkout \<name\>或者git switch \<name\>
 
 ## 创建+切换分支：
-git checkout -b <name>或者git switch -c <name>
+git checkout -b \<name\>或者git switch -c \<name\>
 
 ## 合并分支
 合并分支时，如果可能，Git会用Fast forward模式，但这种模式下，删除分支后，会丢掉分支信息。
@@ -119,6 +122,6 @@ git stash pop 恢复现场的同时删除现场
 
 等于以下的组合
 
-git stash apply  /<指定现场名/>
+git stash apply  \<指定现场名\>
 
 git stash drop 
