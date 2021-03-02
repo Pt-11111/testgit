@@ -43,14 +43,25 @@ git reset HEAD 文件名.后缀
                ⬇此处有一个空格
 git checkout -- 文件名.后缀   注意文件名前面的--
 
+***
+
+
 ## 查看修改文件状态
 git status 
+
+***
+
 
 ## 找不同
 git diff 
 
-## 修改记录
+***
+
+
+## 查看提交记录
 git log 
+
+git log --pretty=oneline --abbrev-commit
 
 ***
 
@@ -61,8 +72,14 @@ git log
 
  git commit --amend 
 
+***
+
+
 ## 重命名
 git mv oldfile newfile  
+
+***
+
 
 
 
@@ -82,6 +99,9 @@ git remote rm 库名
 
 ## 重命名远程库
 git remote rename oldname newname
+
+***
+
 
 ## 创建分支
  git checkout -b dev  此种情况默认是master的分支
@@ -130,6 +150,9 @@ git checkout -b \<name\>或者git switch -c \<name\>
 
 git merge --no-ff -m "message" dev     dev向当前分支合并
 
+***
+
+
 
 ## 保存工作现场  不暂存也不提交
 git stash 
@@ -144,4 +167,45 @@ git stash apply  \<指定现场名\>
 
 git stash drop  删除现场
 
-test
+***
+
+
+## 对commit打标签
+
+git tag \<name\>  
+
+git tag  查看所有tag
+
+默认标签是打在最新提交的commit上的。有时候，如果忘了打标签，比如，现在已经是周五了，但应该在周一打的标签没有打，怎么办？
+
+方法是找到历史提交的commit id，然后打上就可以了
+
+git log --pretty=oneline --abbrev-commit
+
+git tag 标签号 commit号
+
+git show \<tagname\> 查看标签信息
+
+***
+
+
+
+## 向远程仓库推送标签push tag 
+
+git push 仓库名 \<tagname\>    推送一个本地标签；
+
+git push 仓库名 --tags          推送全部未推送过的本地标签；
+
+git tag -d \<tagname\>          删除一个本地标签；
+
+git push origin --delete tag \<tagname\>
+
+git push origin :refs/tags/\<tagname\>  删除一个远程标签。
+
+***
+
+
+以上
+
+***
+
